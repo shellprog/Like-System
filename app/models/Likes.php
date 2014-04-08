@@ -1,8 +1,6 @@
 <?php
-
-class Likes extends Eloquent  {
+class Likes extends Eloquent {
 
 	protected $table = 'likes';
-	
-	
+
 }

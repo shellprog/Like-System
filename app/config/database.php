@@ -55,7 +55,7 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'css3junction',
+			'database'  => 'likes',
 			'username'  => 'root',
 			'password'  => '',
 			'charset'   => 'utf8',

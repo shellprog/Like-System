@@ -102,22 +102,22 @@
 				$('.ajax-like').click(function(e) {
 					e.preventDefault();
 					var l = Ladda.create(this);
-					var id=$(this).attr("id");
+					var id = $(this).attr("id");
 					l.start();
 					$.post("/like", {
 						"post_id" : $(this).attr("id")
 					}, function(response) {
-						if(response.result!=null&&response.result=="1"){
-							if(response.isunlike=="1"){
-								$("#"+id).removeClass("btn-success");
-								$("#"+id).addClass("btn-danger");
-								$("#"+id).html(response.text);
-							}else{
-								$("#"+id).removeClass('btn-danger');
-								$("#"+id).addClass("btn-success");
-								$("#"+id).html(response.text);
+						if (response.result != null && response.result == "1") {
+							if (response.isunlike == "1") {
+								$("#" + id).removeClass("btn-success");
+								$("#" + id).addClass("btn-danger");
+								$("#" + id).html(response.text);
+							} else {
+								$("#" + id).removeClass('btn-danger');
+								$("#" + id).addClass("btn-success");
+								$("#" + id).html(response.text);
 							}
-						}else{
+						} else {
 							alert("Server Error");
 						}
 					}, "json").always(function() {
